@@ -1,7 +1,7 @@
 # If you are not sure what all these fields mean, please refer our documentation here:
 # https://evalai.readthedocs.io/en/latest/configuration.html
-title: Random Number Generator Challenge
-short_description: Random number generation challenge for each submission
+title: SF20K Competition
+short_description: Open-ended question answering on short films
 description: templates/description.html
 evaluation_details: templates/evaluation_details.html
 terms_and_conditions: templates/terms_and_conditions.html
@@ -9,29 +9,24 @@ image: logo.jpg
 submission_guidelines: templates/submission_guidelines.html
 leaderboard_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas a libero nec sagittis.
 evaluation_script: evaluation_script.zip
-remote_evaluation: False
-start_date: 2019-01-01 00:00:00
+remote_evaluation: True
+start_date: 2025-06-19 00:00:00
 end_date: 2099-05-31 23:59:59
 published: True
 tags: 
-  - random-number-generation
-  - machine-learning
-  - data-science
-  - computer-vision
+  - long-form-video-understanding
+  - open-ended-video-qa
+  - movie-understanding
 leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["Metric1", "Metric2", "Metric3", "Total"],
-        "default_order_by": "Total",
+        "labels": ["LLM-AD-Eval"],
+        "default_order_by": "LLM-AD-Eval",
         "metadata": {
-          "Metric1": {
+          "LLM-AD-Eval": {
             "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          },
-          "Metric2": {
-            "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "description": "An LLM-assisted correctness assessment which compares a pair of ground-truth and predicted answers, and assigns a binary correctness label (True/False). The final metric is the percentage of correct answers.",
           }
         }
       }
