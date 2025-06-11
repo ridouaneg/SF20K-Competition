@@ -1,3 +1,44 @@
-<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+<h2><strong>Short-Films 20K (SF20K): Story-level Video Understanding from 20K Short Films</strong></h2>
 
-<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+<p>
+  <a href="https://ridouaneg.github.io/">Ridouane Ghermi</a><sup>1</sup>,
+  <a href="https://triocrossing.github.io/">Xi Wang</a><sup>1</sup>,
+  <a href="https://vicky.kalogeiton.info/">Vicky Kalogeiton</a><sup>1</sup>,
+  <a href="https://www.di.ens.fr/~laptev/">Ivan Laptev</a><sup>2</sup>
+</p>
+
+<p><sup>1</sup>LIX, Ecole Polytechnique, IP Paris, <sup>2</sup>MBZUAI</p>
+
+<p>
+  <a href="https://ridouaneg.github.io/sf20k.html">Website</a>
+  <a href="https://arxiv.org/abs/2406.10221">arXiv</a>
+  <a href="https://huggingface.co/datasets/rghermi/sf20k">Dataset</a>
+  <a href="https://github.com/ridouaneg/sf20k">Code</a>
+</p>
+
+<h3>Asbtract</h3>
+
+<p>
+  Recent developments in vision-language models have significantly advanced video understanding. 
+  Existing datasets and tasks, however, have notable limitations. 
+  Most datasets are confined to short videos with limited events and narrow narratives. 
+  For example, datasets with instructional and egocentric videos often depict activities of one person in a single scene. 
+  Although existing movie datasets offer richer content, they are often limited to short-term tasks, lack publicly available videos, and frequently encounter data leakage issues given the use of subtitles and other information about commercial movies during LLM pretraining. 
+  To address the above limitations, we propose Short-Films 20K (SF20K), the largest publicly available movie dataset. 
+  SF20K is composed of 20,143 amateur films and offers long-term video tasks in the form of multiple-choice and open-ended question answering. 
+  Our extensive analysis of SF20K reveals minimal data leakage, emphasizes the need for long-term reasoning, and demonstrates the strong performance of recent VLMs. 
+  Finally, we show that instruction tuning on the SF20K-Train set substantially improves model performance, paving the way for future progress in long-term video understanding.
+</p>
+
+<h3>Citation</h3>
+
+<p>
+  <code>
+    @article{ghermi2024shortfilmdatasetsfd,
+      title={Long Story Short: Story-level Video Understanding from 20K Short Films}, 
+      author={Ridouane Ghermi and Xi Wang and Vicky Kalogeiton and Ivan Laptev},
+      journal={arXiv preprint arXiv:2406.10221},
+      year={2024},
+    }
+  </code>
+</p>
