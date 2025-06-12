@@ -37,10 +37,14 @@
 <h5>Competition Tracks</h5>
 
 <p></p>
-  The competition is split into two tracks, both focusing on Open-Ended Question Answering:
+  The competition is split into two tracks, both focusing on <strong>Open-Ended Question Answering</strong>:
   <ul>
-    <li><strong>Track 1:</strong> Open-Ended QA - Small Model Track (≤ 7B parameters)</li>
-    <li><strong>Track 2:</strong> Open-Ended QA - Unlimited Model Track (No size limit)</li>
+    <li><strong>Track 1: Open-Ended QA -  Small Model Track (≤ 7B parameters)</strong><br>
+      This track is designed for models with a parameter count of 7 billion or less. 
+    </li>
+    <li><strong>Track 2: Open-Ended QA - Unlimited Model Track (No size limit)</strong><br>
+      This track is designed for models with no size limit.
+    </li>
   </ul>
 </p>
 
@@ -53,47 +57,44 @@
 </p>
 
 <p>
-  <strong>Dataset Splits:</strong>
+  <strong>Dataset Splits</strong>
   <ul>
     <li><strong>SF20K-Train:</strong> 19,071 movies with 191,007 automatically generated QA pairs, provided for model training.</li>
-    <li><strong>SF20K-Test-Expert (public):</strong> 50 movies with 500 QA pairs, used for validation and leaderboard ranking.</li>
+    <li><strong>SF20K-Test-Expert (public):</strong> 50 movies with 500 QA pairs, used for validation.</li>
     <li><strong>SF20K-Test-Expert (private):</strong> 50 movies with 500 QA pairs, used for final ranking.</li>
   </ul>
 </p>
 
 <p>
-  <strong>Access the Dataset:</strong>
-  <ul>
-    <li>The dataset is available on <a href="https://huggingface.co/datasets/rghermi/sf20k">Hugging Face</a>.</li>
-    <li>Additional annotations (i.e., shot boundaries, subtitles, face tracks) are available on <a href="https://github.com/ridouaneg/sf20k">GitHub</a>.</li>
-    <li>Videos are hosted on YouTube and Vimeo; URLs are provided within the dataset.</li>
-  </ul>
+  <strong>Accessing the Dataset</strong>
+  You can access the dataset on <a href="https://huggingface.co/datasets/rghermi/sf20k">Hugging Face</a>. 
+  Supplementary annotations (i.e., shot boundaries, subtitles, and face tracks) are available 
+  on <a href="https://github.com/ridouaneg/sf20k">GitHub</a>. The videos themselves are hosted on YouTube 
+  and Vimeo, with URLs provided within the dataset.
 </p>
 
 <h5>Evaluation</h5>
 
-<ul>
-  <li><strong>Output Type:</strong> Free-form answers, typically a short and concise sentence.</li>
-  <li><strong>Evaluation Metric:</strong> LLM-QA-Eval, an LLM-assisted correctness assessment using <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct">Meta-Llama-3-8B-Instruct</a>. This metric compares a pair of ground-truth and predicted answers and assigns a binary correctness label (True/False). The final metric is the percentage of correct answers.</li>
-</ul>
+<p>
+  Submissions should provide <strong>free-form answers</strong>, typically short and concise sentences. The evaluation relies 
+  on <a href="https://github.com/ridouaneg/sf20k#evaluation-metric">LLM-QA-Eval</a>, an LLM-assisted correctness assessment using Meta-Llama-3-8B-Instruct. 
+  This metric compares ground-truth and predicted answers, assigning a score from 1 to 5. The final metric is the average score.
+</p>
 
 <h5>Competition Phases</h5>
 
 <p>
   The competition is divided into two phases:
 <ul>
-  <li><strong>Phase 1: Public Test Set Evaluation </strong>
-    <ul>
-      <li>Methods are evaluated on the public test set, which includes 50 movies, 500 open-ended questions (OEQs), and a total duration of 10 hours.</li>
-      <li>This phase is used for validation and leaderboard ranking.</li>
-    </ul>
+  <li><strong>Phase 1: Public Test Set Evaluation </strong><br>
+    During this initial phase, methods are evaluated against the public test set. 
+    This phase is primarily for validation purposes, allowing participants to refine their approaches.
   </li>
-  <li><strong>Phase 2: Private Test Set Evaluation</strong>
-    <ul>
-      <li>Methods are evaluated on the private test set, which includes 50 movies, 500 open-ended questions (OEQs), and a total duration of 10 hours.</li>
-      <li>The private test set will be released on October 3rd, 2025.</li>
-      <li>Final rankings will be based on the private test set. Further instructions will be provided for the private test set evaluation.</li>
-    </ul>
+  <li><strong>Phase 2: Private Test Set Evaluation</strong><br>
+    The second phase involves evaluation on the <strong>private test set</strong>, 
+    which will be released on <strong>October 3rd, 2025</strong>. Final rankings will 
+    be determined based on performance in this phase. Further instructions 
+    regarding the private test set evaluation will be provided closer to the release date.
   </li>
 </ul>        
 
@@ -109,10 +110,13 @@
 
 <h5>Starter Code</h5>
 
-<ul>
-    <li><strong>Download Videos:</strong> Download the videos by following the instructions <a href="https://github.com/ridouaneg/sf20k#download-videos">here</a>.</li>
-    <li><strong>Tutorial Notebook:</strong> Follow the tutorial notebook <a href="https://github.com/ridouaneg/sf20k#tutorial-notebook">here</a>.</li>
-</ul>
+<p>
+  To help you get started, we provide resources for downloading videos and a tutorial notebook:
+  <ul>
+      <li><strong>Download Videos:</strong> Download the videos by following the instructions <a href="https://github.com/ridouaneg/sf20k#download-videos">here</a>.</li>
+      <li><strong>Tutorial Notebook:</strong> Follow the tutorial notebook <a href="https://github.com/ridouaneg/sf20k#tutorial-notebook">here</a>.</li>
+  </ul>
+</p>
 
 <h5>Citation</h5>
 
