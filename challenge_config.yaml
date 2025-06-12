@@ -14,9 +14,9 @@ start_date: 2025-06-19 00:00:00
 end_date: 2099-05-31 23:59:59
 published: True
 tags: 
-  - long-form-video-understanding
-  - open-ended-video-qa
   - movie-understanding
+  - long-video
+  - open-ended-qa
 leaderboard:
   - id: 1
     schema:
