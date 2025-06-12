@@ -1,1 +1,34 @@
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+<style>
+  .center {
+    text-align: center;
+  }
+  pre.code {
+    background-color: #f4f4f4;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 5px;
+    font-family: monospace;
+  }
+</style>
+
+<h5>1. Follow the specified output format</h5>
+
+ <p>
+   Each question's answer must be formatted as shown in the example below. The complete submission format for the test phase is available at <a href="https://huggingface.co/datasets/rghermi/sf20k/">this link</a>. Video metadata is not required for submission. 
+ </p>
+
+ <pre class="code">
+{
+  "video_id": "z9HVSEot-O8",
+  "question_id": "z9HVSEot-O8_07",
+  "question": "How does Nina's exploration of her background and art affect her adaptation to city life?",
+  "answer": "It gives her a source of inner strength to adapt to her new life.",
+  "prediction": "It gives her a source of inner strength to adapt to her new life.",
+}
+</pre>
+
+<h5>2. Complete JSON submissions only</h5>
+
+ <p>
+   Your submission JSON must include answers for <strong>all</strong> questions in the corresponding dataset (public and private test). Partial submissions will not be evaluated. 
+ </p>
