@@ -23,64 +23,81 @@
 
 <p>
   The <strong>Short-Films 20K (SF20K) Competition</strong> aims to advance story-level video understanding 
-  by leveraging the new SF20K dataset[1]. While recent multimodal models have demonstrated 
+  by leveraging the new SF20K dataset. While recent multimodal models have demonstrated 
   progress in video understanding, existing benchmarks are largely limited to short videos with simple narratives. In contrast, 
   our competition focuses on complex, long-term reasoning in storytelling by introducing multiple-choice and open-ended 
   question answering tasks.
 </p>
 
-<!-- <p>
-  The SF20K dataset is the largest publicly available movie dataset, composed of 20,143 amateur films. It offers long-term 
-  video tasks in the form of multiple-choice and open-ended question answering. Our extensive analysis of SF20K reveals 
-  minimal data leakage, emphasizes the need for long-term reasoning, and demonstrates the strong performance of recent VLMs.
-</p> -->
-
-<h5>Dataset</h5>
-
 <p>
-  The competition is based on <strong>SF20K</strong>[1], a large-scale, publicly available dataset of 
-  20,143 short films, amounting to 3,684 hours of video content. Each film is self-contained, lasting 5 to 40 minutes 
-  (average 11 minutes), and spans a variety of genres. SF20K includes automatically generated and manually curated 
-  question-answer (QA) pairs.
+  The competition is based on <strong>SF20K-Test-Expert</strong>, a subset of the SF20K dataset, which includes manually crafted open-ended questions.
+  The questions are designed to be challenging, requiring long-term reasoning and complex understanding of the video content.
 </p>
 
-<ul>
+<h5>Competition Tracks</h5>
+
+<p></p>
+  The competition is split into two tracks, both focusing on Open-Ended Question Answering:
+  <ul>
+    <li><strong>Track 1:</strong> Open-Ended QA - Small Model Track (≤ 7B parameters)</li>
+    <li><strong>Track 2:</strong> Open-Ended QA - Unlimited Model Track (No size limit)</li>
+  </ul>
+</p>
+
+<h5>SF20K Dataset</h5>
+
+<p>
+  The competition is powered by SF20K, a large-scale, publicly available dataset of 20,143 short films, 
+  amounting to 3,684 hours of video content. Each film is self-contained, lasting 5 to 40 minutes 
+  (average 11 minutes), and spans a variety of genres. SF20K includes automatically generated and manually created question-answer (QA) pairs.
+</p>
+
+<p>
+  <strong>Dataset Splits:</strong>
+  <ul>
     <li><strong>SF20K-Train:</strong> 19,071 movies with 191,007 automatically generated QA pairs, provided for model training.</li>
     <li><strong>SF20K-Test-Expert (public):</strong> 50 movies with 500 QA pairs, used for validation and leaderboard ranking.</li>
     <li><strong>SF20K-Test-Expert (private):</strong> 50 movies with 500 QA pairs, used for final ranking.</li>
-</ul>
-
-<p>
-  The dataset is available on <a href="https://huggingface.co/datasets/rghermi/sf20k">Hugging Face</a>, with additional annotations (shot boundaries, subtitles, face tracks) on <a href="https://github.com/ridouaneg/sf20k">GitHub</a>. Videos are hosted on YouTube and Vimeo, URLs are provided.
+  </ul>
 </p>
 
-<h5>Tracks</h5>
-
-<ul>
-    <li><strong>Track 1:</strong> Open-Ended QA -  Small Model Track (≤ 7B parameters)</li>
-    <li><strong>Track 2:</strong> Open-Ended QA - Unlimited Model Track (No size limit)</li>
-</ul>
+<p>
+  <strong>Access the Dataset:</strong>
+  <ul>
+    <li>The dataset is available on <a href="https://huggingface.co/datasets/rghermi/sf20k">Hugging Face</a>.</li>
+    <li>Additional annotations (i.e., shot boundaries, subtitles, face tracks) are available on <a href="https://github.com/ridouaneg/sf20k">GitHub</a>.</li>
+    <li>Videos are hosted on YouTube and Vimeo; URLs are provided within the dataset.</li>
+  </ul>
+</p>
 
 <h5>Evaluation</h5>
 
 <ul>
-  <li><strong>Output type:</strong> Free-form answers, typically a short and concise sentence.</li>
-  <li><strong>Evaluation metric:</strong> LLM-QA-Eval</li>
+  <li><strong>Output Type:</strong> Free-form answers, typically a short and concise sentence.</li>
+  <li><strong>Evaluation Metric:</strong> LLM-QA-Eval, an LLM-assisted correctness assessment using <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct">Meta-Llama-3-8B-Instruct</a>. This metric compares a pair of ground-truth and predicted answers and assigns a binary correctness label (True/False). The final metric is the percentage of correct answers.</li>
 </ul>
 
-<h5>Phases</h5>
+<h5>Competition Phases</h5>
 
+<p>
+  The competition is divided into two phases:
 <ul>
-  <li><strong>Phase 1:</strong> Public Test Set</li>
-  Methods are evaluated on the public test set, which include 50 movies, 500 open-ended questions (OEQs), and a total duration of 10 hours.
-  The public test set is used for validation and leaderboard ranking.
-  <li><strong>Phase 2:</strong> Private Test Set</li>
-  Methods are evaluated on the private test set, which include 50 movies, 500 open-ended questions (OEQs), and a total duration of 10 hours.
-  The private test set will be released on October 3rd, 2025.
-  Further instructions will be provided for the private test set evaluation.
-</ul>
+  <li><strong>Phase 1: Public Test Set Evaluation </strong>
+    <ul>
+      <li>Methods are evaluated on the public test set, which includes 50 movies, 500 open-ended questions (OEQs), and a total duration of 10 hours.</li>
+      <li>This phase is used for validation and leaderboard ranking.</li>
+    </ul>
+  </li>
+  <li><strong>Phase 2: Private Test Set Evaluation</strong>
+    <ul>
+      <li>Methods are evaluated on the private test set, which includes 50 movies, 500 open-ended questions (OEQs), and a total duration of 10 hours.</li>
+      <li>The private test set will be released on October 3rd, 2025.</li>
+      <li>Final rankings will be based on the private test set. Further instructions will be provided for the private test set evaluation.</li>
+    </ul>
+  </li>
+</ul>        
 
-<h5>Timeline</h5>
+<h5>Important Dates</h5>
 
 <ul>
     <li><strong>June 19th, 2025:</strong> The competition server launches with data from the public test set.</li>
@@ -93,11 +110,13 @@
 <h5>Starter Code</h5>
 
 <ul>
-    <li><strong>Download videos:</strong> Download the videos by following the instructions <a href="https://github.com/ridouaneg/sf20k#download-videos">here</a>.</li>
-    <li><strong>Benchmarking notebook:</strong> Follow the benchmarking notebook <a href="https://github.com/ridouaneg/sf20k#benchmarking-guide">here</a>.</li>
+    <li><strong>Download Videos:</strong> Download the videos by following the instructions <a href="https://github.com/ridouaneg/sf20k#download-videos">here</a>.</li>
+    <li><strong>Tutorial Notebook:</strong> Follow the tutorial notebook <a href="https://github.com/ridouaneg/sf20k#tutorial-notebook">here</a>.</li>
 </ul>
 
 <h5>Citation</h5>
+
+If you use the SF20K dataset or related resources in your research, please cite the following paper:
 
 <pre class="code">
 @article{ghermi2024shortfilmdatasetsfd,
