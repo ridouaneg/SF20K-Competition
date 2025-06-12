@@ -1,1 +1,22 @@
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+<h5>1. Follow the specified output format</h5>
+
+ <p>
+   Each question's answer must be formatted as shown in the example below. The complete submission format for the test phase is available at <url href="">this link</url>. Video metadata is not required for submission. 
+ </p>
+
+<code>
+  {
+    "video_id": "xxxx",
+    "question_id": "xxxx_yy",
+    "question": "Identify the actions taken by the camera wearer that involved the use of technology.",
+    "gt_answer": "A. The camera wearer engaged with technology by using a mobile phone, adjusting a cooker, and operating a smart home system during various activities.\nB. The camera wearer engaged with technology by using a mobile phone and watching television during various activities.\nC. The camera wearer engaged with technology by using a mobile phone, adjusting a cooker, and programming a robotic vacuum during various activities.\nD. The camera wearer engaged with technology by using a mobile phone, watching television, and adjusting a cooker during various activities.\nE. The camera wearer engaged with technology by using a tablet, watching a computer monitor, and adjusting a microwave during various activities.",
+    "pred_answer": "The camera wearer engaged with technology by using a mobile phone, adjusting a cooker, and operating a smart home system during various activities.",
+  }
+</code>
+
+
+<h5>2. Complete JSON submissions only</h5>
+
+ <p>
+   Your submission JSON must include answers for <textbf>all</textbf> questions in the corresponding dataset (dev and test). Partial submissions will not be evaluated. 
+ </p>
