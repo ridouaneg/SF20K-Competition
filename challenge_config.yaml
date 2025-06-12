@@ -21,10 +21,10 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["LLM-AD-Eval"],
-        "default_order_by": "LLM-AD-Eval",
+        "labels": ["LLM-QA-Eval"],
+        "default_order_by": "LLM-QA-Eval",
         "metadata": {
-          "LLM-AD-Eval": {
+          "LLM-QA-Eval": {
             "sort_ascending": True,
             "description": "An LLM-assisted correctness assessment which compares a pair of ground-truth and predicted answers, and assigns a binary correctness label (True/False). The final metric is the percentage of correct answers.",
           }
@@ -33,7 +33,7 @@ leaderboard:
 
 challenge_phases:
   - id: 1
-    name: Dev Phase
+    name: Public Test Set
     description: templates/challenge_phase_1_description.html
     leaderboard_public: False
     is_public: True
@@ -43,12 +43,12 @@ challenge_phases:
     allowed_email_ids: []
     disable_logs: False
     is_submission_public: True
-    start_date: 2019-01-19 00:00:00
+    start_date: 2025-06-19 00:00:00
     end_date: 2099-04-25 23:59:59
     test_annotation_file: annotations/test_annotations_devsplit.json
     codename: dev
-    max_submissions_per_day: 5
-    max_submissions_per_month: 50
+    max_submissions_per_day: 1
+    max_submissions_per_month: 10
     max_submissions: 50
     default_submission_meta_attributes:
       - name: method_name
@@ -80,7 +80,7 @@ challenge_phases:
     is_partial_submission_evaluation_enabled: False
     allowed_submission_file_types: ".json, .zip, .txt, .tsv, .gz, .csv, .h5, .npy, .npz"
   - id: 2
-    name: Test Phase
+    name: Private Test Set
     description: templates/challenge_phase_2_description.html
     leaderboard_public: True
     is_public: True
@@ -90,13 +90,13 @@ challenge_phases:
     allowed_email_ids: []
     disable_logs: False
     is_submission_public: True
-    start_date: 2019-01-01 00:00:00
+    start_date: 2019-10-03 00:00:00
     end_date: 2099-05-24 23:59:59
     test_annotation_file: annotations/test_annotations_testsplit.json
     codename: test
-    max_submissions_per_day: 5
-    max_submissions_per_month: 50
-    max_submissions: 50
+    max_submissions_per_day: 1
+    max_submissions_per_month: 1
+    max_submissions: 1
     default_submission_meta_attributes:
       - name: method_name
         is_visible: True
@@ -126,11 +126,11 @@ challenge_phases:
 
 dataset_splits:
   - id: 1
-    name: Train Split
-    codename: train_split
+    name: Public Test Set
+    codename: public_test_set
   - id: 2
-    name: Test Split
-    codename: test_split
+    name: Private Test Set
+    codename: private_test_set
 
 challenge_phase_splits:
   - challenge_phase_id: 1
