@@ -33,7 +33,7 @@ leaderboard:
 
 challenge_phases:
   - id: 1
-    name: Public Test Set
+    name: Dev Phase
     description: templates/challenge_phase_1_description.html
     leaderboard_public: False
     is_public: True
@@ -80,7 +80,7 @@ challenge_phases:
     is_partial_submission_evaluation_enabled: False
     allowed_submission_file_types: ".json, .zip, .txt, .tsv, .gz, .csv, .h5, .npy, .npz"
   - id: 2
-    name: Private Test Set
+    name: Test Phase
     description: templates/challenge_phase_2_description.html
     leaderboard_public: True
     is_public: True
@@ -141,14 +141,6 @@ challenge_phase_splits:
     is_leaderboard_order_descending: True
     show_execution_time: True
     show_leaderboard_by_latest_submission: True
-  - challenge_phase_id: 2
-    leaderboard_id: 1
-    dataset_split_id: 1
-    visibility: 3
-    leaderboard_decimal_precision: 2
-    is_leaderboard_order_descending: True
-    showeceution_time: False
-    show_leaderboard_by_latest_submission: False
   - challenge_phase_id: 2
     leaderboard_id: 1
     dataset_split_id: 2
